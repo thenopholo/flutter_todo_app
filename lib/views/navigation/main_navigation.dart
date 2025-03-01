@@ -69,10 +69,8 @@ class _MainNavigation extends State<MainNavigation> {
                 label: 'Messages',
               ),
               BottomNavigationBarItem(
-                // TODO: Fix the head shot bug in the icon
                 icon: state.currentIndex == 3
-                    ? ImageIcon(
-                        AssetImage('assets/icons/fill/profile_fill.png'))
+                    ? Icon(CupertinoIcons.profile_circled)
                     : ImageIcon(
                         AssetImage('assets/icons/outline/profile_outline.png')),
                 label: 'Account',
@@ -87,15 +85,15 @@ class _MainNavigation extends State<MainNavigation> {
 
 Widget _setPage(int index) {
   switch (index) {
-    case 0 :
-    return const HomePage();
-    case 1 :
-    return const TasksPage();
-    case 2: 
-    return const MessagesPage();
-    case 3 :
-    return const AccountPage();
-    default :
-    return const HomePage();
+    case 0:
+      return const HomePage();
+    case 1:
+      return const TasksPage();
+    case 2:
+      return const MessagesPage();
+    case 3:
+      return const AccountPage();
+    default:
+      return const HomePage();
   }
 }
