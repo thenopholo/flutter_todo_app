@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../core/ui/theme/app_theme.dart';
 import '../views/home/home_page.dart';
+import '../views/navigation/main_navigation.dart';
 
 class AppRoutes extends StatelessWidget {
   const AppRoutes({super.key});
@@ -10,12 +12,11 @@ class AppRoutes extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Todo App',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
       routes: {
-        '/': (_) => const HomePage(),
+        '/': (_) => const MainNavigation(),
+        'home': (_) => const HomePage(),
       },
     );
   }
