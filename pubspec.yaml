@@ -73,6 +73,11 @@ flutter:
     - assets/icons/outline/calendar_outline.png
     - assets/icons/outline/message_outline.png
     - assets/icons/outline/profile_outline.png
+    - assets/icons/outline/edit_outline.png
+    - assets/icons/outline/config_outline.png
+    - assets/icons/outline/faq_outline.png
+    - assets/icons/outline/logout_outline.png
+    - assets/icons/outline/login.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app_colors.dart';
 import 'app_gradient.dart';
 
-class AppTheme{
+class AppTheme {
   // Singleton pattern para acesso global
   static final AppTheme _instance = AppTheme._internal();
 
@@ -30,21 +30,39 @@ class AppTheme{
         surface: Colors.white,
         onSurface: AppColors.tertiaryColor,
       ),
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: Color(0xFFF2F2F2),
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.primaryColor,
         foregroundColor: Colors.white,
         elevation: 0,
       ),
       textTheme: TextTheme(
-        displayLarge: GoogleFonts.poppins(fontSize: 28.0, fontWeight: FontWeight.bold, color: AppColors.tertiaryColor),
-        displayMedium: GoogleFonts.poppins(fontSize: 24.0, fontWeight: FontWeight.bold, color: AppColors.tertiaryColor),
-        displaySmall: GoogleFonts.poppins(fontSize: 20.0, fontWeight: FontWeight.bold, color: AppColors.tertiaryColor),
-        headlineMedium: GoogleFonts.poppins(fontSize: 18.0, fontWeight: FontWeight.w600, color: AppColors.tertiaryColor),
-        titleLarge: GoogleFonts.poppins(fontSize: 16.0, fontWeight: FontWeight.w600, color: AppColors.tertiaryColor),
-        bodyLarge: GoogleFonts.poppins(fontSize: 16.0, color: AppColors.tertiaryColor),
-        bodyMedium: GoogleFonts.poppins(fontSize: 14.0, color: AppColors.tertiaryColor),
-        bodySmall: GoogleFonts.poppins(fontSize: 12.0, color: AppColors.secondaryColor),
+        displayLarge: GoogleFonts.poppins(
+            fontSize: 28.0,
+            fontWeight: FontWeight.bold,
+            color: AppColors.tertiaryColor),
+        displayMedium: GoogleFonts.poppins(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            color: AppColors.tertiaryColor),
+        displaySmall: GoogleFonts.poppins(
+            fontSize: 20.0,
+            fontWeight: FontWeight.bold,
+            color: AppColors.tertiaryColor),
+        headlineMedium: GoogleFonts.poppins(
+            fontSize: 18.0,
+            fontWeight: FontWeight.w600,
+            color: AppColors.tertiaryColor),
+        titleLarge: GoogleFonts.poppins(
+            fontSize: 16.0,
+            fontWeight: FontWeight.w600,
+            color: AppColors.tertiaryColor),
+        bodyLarge:
+            GoogleFonts.poppins(fontSize: 16.0, color: AppColors.tertiaryColor),
+        bodyMedium:
+            GoogleFonts.poppins(fontSize: 14.0, color: AppColors.tertiaryColor),
+        bodySmall: GoogleFonts.poppins(
+            fontSize: 12.0, color: AppColors.secondaryColor),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -68,7 +86,8 @@ class AppTheme{
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(color: AppColors.secondaryColor),
         ),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       ),
       cardTheme: CardTheme(
         elevation: 2,
@@ -109,14 +128,20 @@ class AppTheme{
         elevation: 0,
       ),
       textTheme: TextTheme(
-        displayLarge: GoogleFonts.poppins(fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.white),
-        displayMedium: GoogleFonts.poppins(fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
-        displaySmall: GoogleFonts.poppins(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
-        headlineMedium: GoogleFonts.poppins(fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.white),
-        titleLarge: GoogleFonts.poppins(fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.white),
+        displayLarge: GoogleFonts.poppins(
+            fontSize: 28.0, fontWeight: FontWeight.bold, color: Colors.white),
+        displayMedium: GoogleFonts.poppins(
+            fontSize: 24.0, fontWeight: FontWeight.bold, color: Colors.white),
+        displaySmall: GoogleFonts.poppins(
+            fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
+        headlineMedium: GoogleFonts.poppins(
+            fontSize: 18.0, fontWeight: FontWeight.w600, color: Colors.white),
+        titleLarge: GoogleFonts.poppins(
+            fontSize: 16.0, fontWeight: FontWeight.w600, color: Colors.white),
         bodyLarge: GoogleFonts.poppins(fontSize: 16.0, color: Colors.white),
         bodyMedium: GoogleFonts.poppins(fontSize: 14.0, color: Colors.white),
-        bodySmall: GoogleFonts.poppins(fontSize: 12.0, color: AppColors.secondaryColor),
+        bodySmall: GoogleFonts.poppins(
+            fontSize: 12.0, color: AppColors.secondaryColor),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -148,7 +173,7 @@ class AppTheme{
   // Métodos auxiliares para acessar gradientes em outros lugares do app
   static LinearGradient get blueGradient => AppGradient.blueGradient;
   static LinearGradient get darkGradient => AppGradient.darkGradient;
-  
+
   // Método helper para criar botões com gradiente
   static Decoration gradientButtonDecoration({bool isDark = false}) {
     return BoxDecoration(
@@ -156,9 +181,10 @@ class AppTheme{
       borderRadius: BorderRadius.circular(8),
     );
   }
-  
+
   // Método helper para criar containers com gradiente
-  static BoxDecoration gradientBoxDecoration({bool isDark = false, BorderRadius? borderRadius}) {
+  static BoxDecoration gradientBoxDecoration(
+      {bool isDark = false, BorderRadius? borderRadius}) {
     return BoxDecoration(
       gradient: isDark ? AppGradient.darkGradient : AppGradient.blueGradient,
       borderRadius: borderRadius ?? BorderRadius.circular(12),
