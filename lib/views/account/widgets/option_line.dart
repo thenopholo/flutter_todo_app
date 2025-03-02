@@ -54,7 +54,7 @@ class optionLine extends StatelessWidget {
             width: screenWidth * 0.85,
             decoration: BoxDecoration(
               border: Border(
-                bottom: BorderSide(color: AppColors.tertiaryColor, width: 1.0),
+                bottom: BorderSide(color: Colors.grey, width: 1.0),
               ),
             ),
           )
